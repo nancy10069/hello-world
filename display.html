@@ -1,0 +1,46 @@
+
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>COP GAME</title>
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+
+<script>
+	function getValue(url){
+			//首先获取地址
+			var url = url || window.location.href;
+			//获取传值
+			var arr = url.split("?");
+			//判断是否有传值
+			if(arr.length == 1){
+				return null;
+			}
+			//获取get传值的个数
+			var value_arr = arr[1].split("&");
+			//循环生成返回的对象
+			var obj = {};
+			for(var i = 0; i < value_arr.length; i++){
+				var key_val = value_arr[i].split("=");
+				obj[key_val[0]]=key_val[1];
+			}
+			if (obj.passcode=="ABCDEF"){
+ document.write("Congratulations! You have become one of our community. Corrupt Cop!");
+}else{
+document.write();
+document.write("Your access is denied, Cop!");
+
+}
+			return obj;
+	}
+    getValue();
+</script>
+
+</body>
+</html>
